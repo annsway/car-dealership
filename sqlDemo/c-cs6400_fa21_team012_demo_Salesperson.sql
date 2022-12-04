@@ -1,0 +1,11 @@
+INSERT INTO cs6400_fa21_team012_demo.Salesperson (username) VALUES ('roland');
+INSERT INTO cs6400_fa21_team012_demo.Salesperson (username) VALUES ('user01');
+INSERT INTO cs6400_fa21_team012_demo.Salesperson (username) VALUES ('user04');
+INSERT INTO cs6400_fa21_team012_demo.Salesperson (username) VALUES ('user06');
+INSERT INTO cs6400_fa21_team012_demo.Salesperson (username) VALUES ('user08');
+INSERT INTO cs6400_fa21_team012_demo.Salesperson (username) VALUES ('user10');
+INSERT INTO cs6400_fa21_team012_demo.Salesperson (username) VALUES ('user19');
+INSERT INTO cs6400_fa21_team012_demo.Salesperson (username) VALUES ('user21');
+INSERT INTO cs6400_fa21_team012_demo.Salesperson (username) VALUES ('user22');
+INSERT INTO cs6400_fa21_team012_demo.Salesperson (username) VALUES ('user23');
+INSERT INTO cs6400_fa21_team012_demo.Salesperson (username) VALUES ('user32');

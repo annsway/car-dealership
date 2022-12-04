@@ -1,0 +1,576 @@
+{
+	"info": {
+		"_postman_id": "f7b7e2f4-301d-4218-84fa-21661fdf1c2e",
+		"name": "cs6400",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18424403"
+	},
+	"item": [
+		{
+			"name": "ViewRepairDetailByVIN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/vehicle/repair/detail?vin=nnnn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vehicle",
+						"repair",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "vin",
+							"value": "nnnn"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReportSalesByColor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/report/sales/color",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"report",
+						"sales",
+						"color"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VehicleSearch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vin\":\"fff\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/vehicle/search?vin=bbb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vehicle",
+						"search"
+					],
+					"query": [
+						{
+							"key": "vin",
+							"value": "bbb"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RepairHistoryByVIN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/repair/history?vin=nnnn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"repair",
+						"history"
+					],
+					"query": [
+						{
+							"key": "vin",
+							"value": "nnnn"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerSearch-individual",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/customer/find?searchID=M6666",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer",
+						"find"
+					],
+					"query": [
+						{
+							"key": "searchID",
+							"value": "M6666"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CustomerSearch-business",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/customer/find?searchID=123-44-5329",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer",
+						"find"
+					],
+					"query": [
+						{
+							"key": "searchID",
+							"value": "123-44-5329"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"username\": \"ann123\", \"password\": \"123\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/login?username=ann123&password=123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "ann123"
+						},
+						{
+							"key": "password",
+							"value": "123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Repair-create new repair",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"vin\": \"bb\",\n  \"startDate\": \"2021-11-24\",\n  \"serviceWriterUsername\": \"bob123\",\n  \"searchID\": \"M6666\",\n  \"odometerReading\": \"0\",\n  \"laborCharge\": \"0\",\n  \"description\": \"test\"\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/repair/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"repair",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Repair-modify labor charge",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vin\": \"bbb\",\n    \"startDate\": \"2021-11-24\",\n    \"laborCharge\": \"300\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/repair/update/laborcharge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"repair",
+						"update",
+						"laborcharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Repair-add parts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vin\": \"nnnn\",\n    \"startDate\": \"2021-7-31\",\n    \"partNumber\": \"nba777\",\n    \"quantity\":\"1\",\n    \"vendorName\":\"Honda\",\n    \"partPrice\":\"50\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/part/insert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"part",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sell Vehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"vin\": \"1V2F2F\",\n    \"salesUsername\": \"ann123\",\n    \"searchID\": \"M6666\",\n    \"soldDate\": \"2021-8-8\",\n    \"soldPrice\": \"88888\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/sellVehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sellVehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sale Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/vehicle/sale/detail?vin=bbb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vehicle",
+						"sale",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "vin",
+							"value": "bbb"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Repair Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/vehicle/repair/detail?vin=bbb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vehicle",
+						"repair",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "vin",
+							"value": "bbb"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report - Monthly Sales",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/report/monthlysales",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"report",
+						"monthlysales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sales By Color",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/report/sales/color",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"report",
+						"sales",
+						"color"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report - Partstatistics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/report/partstatistics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"report",
+						"partstatistics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report - Repair By MF-Type-Model",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/report/repair/detail?manufacturer=Toyota",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"report",
+						"repair",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "manufacturer",
+							"value": "Toyota"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report - Repair General",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/report/repair/general",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"report",
+						"repair",
+						"general"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MF",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/manufacturer/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"manufacturer",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Colors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/color/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"color",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddVehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"vin\": \"asdfsdfasdfasdfag\",\n    \"manufacturerName\": \"BMW\",\n    \"modelName\": \"3S\",\n    \"modelYear\": \"2021\",\n    \"invoicePrice\": \"30000\",\n    \"invoiceDate\": \"2021-12-01\",\n    \"clerkUsername\": \"zoe123\",\n    \"description\": \"adding vehicle to db\",\n    \"type\": \"Car\",\n    \"numDoors\": \"4\",\n    \"roofType\": null,\n    \"backSeatCount\": null,\n    \"cargoCapacity\": null,\n    \"cargoCoverType\": null,\n    \"numRearAxies\": null,\n    \"hasDriverSideBackDoor\": null,\n    \"driveTrainType\": null,\n    \"numCupHolders\": null,\n    \"colors\": \"Black\",\n    \"listPrice\": \"37500\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/addVehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"addVehicle"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
